@@ -1,0 +1,35 @@
+# 排除源文档和设计文件
+# Exclude source documents and design files
+
+# Markdown 源文件
+*.md
+!README.md
+
+# 设计相关文件夹
+设计相关/
+
+# 课程源文件
+**/课程*.md
+**/演讲稿.md
+**/逐字稿.md
+**/框架.md
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 临时文件
+*.tmp
+*.temp
