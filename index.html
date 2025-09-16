@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanley 演讲集合 - Presentation Collection</title>
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-alt {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+        
+        .presentation-card {
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .presentation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .presentation-card:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Background -->
+    <div class="floating-bg"></div>
+    
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-6xl font-black text-white mb-4">
+                    Stanley <span class="gradient-text-alt">演讲集合</span>
+                </h1>
+                <p class="text-2xl text-gray-200 mb-2">Presentation Collection</p>
+                <p class="text-lg text-gray-300">现代化演讲页面展示 | Modern Presentation Showcase</p>
+            </div>
+            
+            <!-- Presentations Grid -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Python in Future -->
+                <div class="glass-card rounded-3xl p-8 presentation-card" onclick="window.open('./python in future/Python-in-Future.html', '_blank')">
+                    <div class="text-center">
+                        <div class="mb-6">
+                            <i class="fas fa-robot text-6xl text-blue-300"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">
+                            Python in <span class="gradient-text">Future</span>
+                        </h2>
+                        <p class="text-xl text-gray-200 mb-4">在AI时代重塑编程学习</p>
+                        <p class="text-sm text-gray-400 mb-6">Reshape Programming Learning in the AI Era</p>
+                        
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>AI时代编程思维转变</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>新的80/20学习法则</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>人机协作实践方法</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i>
+                                开始演讲
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 软件工程核心思想 -->
+                <div class="glass-card rounded-3xl p-8 presentation-card" onclick="window.open('./软件工程核心思想/软件工程核心思想.html', '_blank')">
+                    <div class="text-center">
+                        <div class="mb-6">
+                            <i class="fas fa-cogs text-6xl text-purple-300"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-4">
+                            软件工程<span class="gradient-text-alt">核心思想</span>
+                        </h2>
+                        <p class="text-xl text-gray-200 mb-4">构建可靠软件系统的方法论</p>
+                        <p class="text-sm text-gray-400 mb-6">Methodology for Building Reliable Software Systems</p>
+                        
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>软件工程基本原则</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>系统设计最佳实践</span>
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                                <span>质量保证方法论</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <div class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold inline-flex items-center">
+                                <i class="fas fa-play mr-2"></i>
+                                开始演讲
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Info -->
+            <div class="glass-card rounded-2xl p-6">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        使用说明
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-300">
+                        <div>
+                            <i class="fas fa-mouse-pointer text-blue-300 text-2xl mb-2"></i>
+                            <p><strong>点击卡片</strong><br>选择要查看的演讲内容</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-keyboard text-green-300 text-2xl mb-2"></i>
+                            <p><strong>键盘导航</strong><br>使用方向键或空格键切换幻灯片</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-mobile-alt text-purple-300 text-2xl mb-2"></i>
+                            <p><strong>响应式设计</strong><br>支持桌面和移动设备访问</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-600">
+                        <p class="text-gray-400">
+                            <i class="fas fa-user-tie mr-2"></i>
+                            演讲者：Stanley 沈毅 | 
+                            <i class="fas fa-calendar mr-2 ml-4"></i>
+                            更新时间：2024年
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.presentation-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
