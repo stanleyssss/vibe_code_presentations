@@ -1,6 +1,9 @@
 # Stanley 演讲集合 | Presentation Collection
 
 现代化的演讲页面展示项目，包含多个主题的演讲内容。
+访问网址：
+https://vibe_code_presentations.vercel.app
+https://stanleyssss.github.io/vibe_code_presentations
 
 ## 📁 项目结构
 
