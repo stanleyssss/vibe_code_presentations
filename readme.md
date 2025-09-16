@@ -8,25 +8,10 @@
 ├── index.html                          # 主页面 - 演讲导航
 ├── python in future/
 │   ├── Python-in-Future.html          # Python in Future 演讲页面
-│   ├── 课程框架.md                     # 课程框架文档
-│   ├── 课程逐字稿.md                   # 详细演讲稿
-│   └── 课程原思路和演讲稿.md           # 原始思路
 ├── 软件工程核心思想/
 │   ├── 软件工程核心思想.html           # 软件工程演讲页面
-│   ├── 软件工程核心思想-框架.md        # 框架文档
-│   └── 软件工程核心思想逐字稿.md       # 详细演讲稿
-└── 设计相关/
-    ├── 设计风格.md                     # 设计规范
-    └── readme.md                       # 设计说明
+
 ```
-
-## 🎨 设计特色
-
-### 视觉风格
-- **Apple-like 质感**：深色渐变背景 + 玻璃拟态卡片
-- **Bento Grid 布局**：结构化信息展示
-- **渐变文字高亮**：重点内容突出显示
-- **中英双语设计**：国际化表达
 
 ### 技术栈
 - **TailwindCSS**：快速响应式设计
@@ -57,7 +42,8 @@
 
 3. **访问地址**
    ```
-   https://你的用户名.github.io/presentation-collection/
+   https://你的用户名.github.io/vibe_code_presentations
+   
    ```
 
 ### 方法二：Netlify
@@ -113,33 +99,61 @@ npx serve .
 - **内容**：工程原则、系统设计、质量保证
 - **适用**：软件工程师、项目经理、技术团队
 
-## 🛠️ 自定义修改
+## 🔄 更新远程文件
 
-### 添加新演讲
-1. 创建新文件夹
-2. 添加 HTML 演讲文件
-3. 在 `index.html` 中添加导航卡片
+### 更新 index.html 或其他文件到 GitHub
 
-### 修改样式
-- 编辑 CSS 变量调整配色
-- 修改 TailwindCSS 类名调整布局
-- 更新图标和字体
+当你修改了 `index.html` 或其他文件后，使用以下命令将更改推送到 GitHub：
 
-### 添加功能
-- 集成 Motion.js 添加动画
-- 使用 Chart.js 添加图表
-- 添加音频/视频支持
+```bash
+# 1. 添加修改的文件到暂存区
+git add index.html
+
+# 或者添加所有修改的文件
+git add .
+
+# 2. 提交更改
+git commit -m "Update index.html - 描述你的修改内容"
+
+# 3. 推送到远程仓库
+git push origin main
+```
+
+### 快速更新流程
+
+```bash
+# 一行命令完成所有操作
+git add . && git commit -m "Update presentation files" && git push origin main
+```
+
+### 检查更新状态
+
+```bash
+# 查看当前文件状态
+git status
+
+# 查看提交历史
+git log --oneline -5
+
+# 检查远程仓库状态
+git remote -v
+```
+
+### 注意事项
+
+- 每次修改后都需要执行上述步骤才能更新 GitHub Pages
+- GitHub Pages 通常在推送后 1-5 分钟内更新
+- 如果页面没有更新，可以尝试强制刷新浏览器（Ctrl+F5 或 Cmd+Shift+R）
+
 
 ## 📄 许可证
-
 本项目仅供学习和演示使用。
 
 ## 👨‍💻 作者
-
-**Stanley 沈毅**
+**Stanley**
 - 演讲者和项目创建者
 - 专注于现代化技术演讲和教学
 
 ---
 
-*最后更新：2024年*
+*最后更新：2025年*
